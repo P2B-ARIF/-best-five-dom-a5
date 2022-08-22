@@ -241,6 +241,7 @@ footer p {
   }
   .player-group .container .right-section {
     margin-left: 0.5rem;
+    width: 35%;
   }
   .player-group .container .right-section .budget .per-player input {
     padding: 0.2rem 0.5rem;
