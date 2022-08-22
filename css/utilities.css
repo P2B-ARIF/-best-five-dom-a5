@@ -1,0 +1,33 @@
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: darkblue;
+  color: white;
+  border: 2px solid rgb(18, 18, 66);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.btn:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background-color: rgb(2, 2, 111);
+}
+
+.disabled {
+  background-color: #9f9fb4;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+  cursor: no-drop;
+}
+.disabled:hover {
+  box-shadow: none;
+  background-color: #9f9fb4;
+}
