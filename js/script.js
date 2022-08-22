@@ -3,7 +3,7 @@ let count = 0;
 function selectbtn(cart) {
   const name = cart.parentNode.childNodes[3].innerText;
   if (count === 5) {
-    alert("You Already Five Player Selected..!");
+    alert("You Already Selected Five Player..!");
     return;
   }
   count++;
@@ -58,9 +58,6 @@ document.getElementById("calculate-total").addEventListener("click", function ()
   textValue.innerText = newExpenses;
   const total = newExpenses + manager + coach;
   textValue.innerText = total;
-  if (isNaN(manager) && isNaN(coach)) {
-    textValue.innerText = newExpenses;
-  }
 
   if (isNaN(textValue.innerText)) {
     textValue.innerText = "000";
