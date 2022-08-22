@@ -105,6 +105,7 @@ header::before {
 }
 .player-group .container .right-section {
   margin-left: 1rem;
+  width: 23%;
 }
 .player-group .container .right-section .sec-top {
   background-color: black;
