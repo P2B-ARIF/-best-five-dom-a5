@@ -17,7 +17,6 @@ function selectbtn(cart) {
   h2.innerHTML = `
             <span>${countDot}</span>
             <span>${name}</span>
-
     `;
   select.appendChild(h2);
 
@@ -32,7 +31,6 @@ document.getElementById("calculate").addEventListener("click", function () {
 
   const textValue = document.getElementById("expenses");
   const textValueInnerText = textValue.innerText;
-  // const multiple =  0 * ;
   if (isNaN(perPlayer)) {
     alert("Please Provide Number...!");
     return;
@@ -46,29 +44,28 @@ document.getElementById("calculate").addEventListener("click", function () {
 // calculate end
 
 // calculate total start
-document
-  .getElementById("calculate-total")
-  .addEventListener("click", function () {
-    const manager = inputValue("manager");
-    const coach = inputValue("coach");
+document.getElementById("calculate-total").addEventListener("click", function () {
+  let manager = inputValue("manager");
+  let coach = inputValue("coach");
 
-    const expenses = document.getElementById("expenses");
-    const expensesValueInnerText = expenses.innerText;
-    const newExpenses = parseFloat(expensesValueInnerText);
+  const expenses = document.getElementById("expenses");
+  const expensesValueInnerText = expenses.innerText;
+  const newExpenses = parseFloat(expensesValueInnerText);
 
-    const textValue = document.getElementById("total");
-    const textValueInnerText = textValue.innerText;
+  const textValue = document.getElementById("total");
+  const textValueInnerText = textValue.innerText;
 
-    const managerTaka = manager + 0;
-    const coachTaka = coach + 0;
-    const newExpensesTaka = newExpenses + 0;
-    console.log(managerTaka);
-    const total = newExpenses + manager + coach;
-    textValue.innerText = total;
+  textValue.innerText = newExpenses;
+  const total = newExpenses + manager + coach;
+  textValue.innerText = total;
+  if (isNaN(manager) && isNaN(coach)) {
+    textValue.innerText = newExpenses;
+  }
 
-    if (isNaN(textValue.innerText)) {
-      alert("Please Provide Number...!");
-      return;
-    }
-  });
+  if (isNaN(textValue.innerText)) {
+    textValue.innerText = "000";
+    alert("Please Provide Number...!");
+    return;
+  }
+});
 // calculate total end
