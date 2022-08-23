@@ -6,8 +6,21 @@ function selectbtn(cart) {
     alert("You Already Selected Five Player..!");
     return;
   }
-  count++;
 
+
+  const selectCount = document.getElementById('select-count');
+  const selectCountValue = selectCount.innerText;
+
+  const newNumber = ['I', 'II', 'III', 'IV', 'V'];
+  let a = count;
+  for (let i = 1; a <= count; i++) {
+    const element = newNumber[a];
+    a++;
+    selectCount.innerText = element;
+  }
+
+
+  count++;
   let countDot = count + ".";
   cart.parentNode.childNodes[7].setAttribute("class", "btn disabled");
   cart.parentNode.childNodes[7].innerText = "SELECTED";
@@ -22,7 +35,8 @@ function selectbtn(cart) {
 
   const button = cart.parentNode.childNodes[7];
   button.disabled = true;
-}
+
+};
 // player cart selection end
 
 // calculate start
