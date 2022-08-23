@@ -123,6 +123,9 @@ header::before {
   border-bottom: 2px solid tomato;
   display: inline-block;
 }
+.player-group .container .right-section .sec-top .selected-v #select-count{
+  color: tomato;
+}
 .player-group .container .right-section .select h2 {
   font-size: 1rem;
   color: white;
